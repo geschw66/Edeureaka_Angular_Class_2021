@@ -5,6 +5,7 @@ import { fromEventPattern } from 'rxjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { httpInterceptorProviders } from './core/interceptors';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     AppRoutingModule
   ],
-  providers: [],
+  // missing something here.
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
